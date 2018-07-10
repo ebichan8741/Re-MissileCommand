@@ -306,7 +306,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\EnemyManager.cs" />
     <Compile Include="Assets\Scripts\Explosion.cs" />
+    <Compile Include="Assets\Scripts\Missile.cs" />
+    <Compile Include="Assets\Scripts\MissileGenerator.cs" />
     <Compile Include="Assets\Scripts\Reticle.cs" />
   </ItemGroup>
   <ItemGroup>
