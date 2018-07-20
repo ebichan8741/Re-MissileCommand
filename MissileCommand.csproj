@@ -310,9 +310,13 @@
     <Compile Include="Assets\Scripts\Explosion.cs" />
     <Compile Include="Assets\Scripts\Missile.cs" />
     <Compile Include="Assets\Scripts\MissileGenerator.cs" />
+    <Compile Include="Assets\Scripts\PlayTouchPanel.cs" />
     <Compile Include="Assets\Scripts\Reticle.cs" />
+    <Compile Include="Assets\Scripts\RippleControll.cs" />
+    <Compile Include="Assets\Scripts\TapRipple.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Shader\Ripple.shader" />
     <None Include="C:\Users\Tebic\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="C:\Users\Tebic\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="C:\Users\Tebic\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\Alert.uxml" />

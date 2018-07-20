@@ -22,7 +22,6 @@ public class Reticle : MonoBehaviour {
 		{
 			Vector3 tmp = transform.position;
 			Instantiate(Explosion, new Vector3(tmp.x,tmp.y,tmp.z), Quaternion.identity);
-			Debug.Log(tmp);
 		}
 	}
 }
