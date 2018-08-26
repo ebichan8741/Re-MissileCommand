@@ -12,20 +12,33 @@ public class MissileGenerator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
+
 		time += Time.deltaTime;
 		if (time >= CreateSpeed)
 		{
-			Instantiate(Missile, new Vector3(Random.Range(MinRangeX, MaxRangeX),
-											 Random.Range(MinRangeY, MaxRangeY),
-											 0),
-										Quaternion.Euler(0,
-														 0,
-														 Random.Range(MinRotRange, MaxRotRange)));
+			GameObject[] Cities = GameObject.FindGameObjectsWithTag("City");
+
+			int i = Random.Range(0, 5);
+			Vector3 targetPos = Cities[i].transform.position;   // City1~6の間でランダムに選択
+			Vector3 missilePos = new Vector3(Random.Range(MinRangeX, MaxRangeX), Random.Range(MinRangeY, MaxRangeY), 0.0f);     // ミサイル生成座標
+			Vector3 targetDir = targetPos - missilePos;
+			var rot = Quaternion.LookRotation(targetDir);
+			rot.z = rot.z * Mathf.Rad2Deg;
+
+			//Instantiate(Missile, new Vector3(Random.Range(MinRangeX, MaxRangeX),
+			//								 Random.Range(MinRangeY, MaxRangeY),
+			//								 0),
+			//							Quaternion.Euler(0,
+			//											 0,
+			//											 Random.Range(MinRotRange, MaxRotRange)));
+			Instantiate(Missile, missilePos,Quaternion.Euler(0,
+															 0,
+															 0));
 			time = 0;
 		}
 	}

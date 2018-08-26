@@ -29,7 +29,6 @@ public class Explosion : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		Debug.Log("爆発の方");
 		if (collision.gameObject.tag == "Missile")
 		{
 			Vector3 tmp = transform.position;

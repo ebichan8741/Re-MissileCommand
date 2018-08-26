@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Explosion
   - Missile
+  - City
+  - Command
+  - Ground
   layers:
   - Default
   - TransparentFX
