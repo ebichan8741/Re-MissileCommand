@@ -313,6 +313,7 @@
     <Compile Include="Assets\Scripts\PlayTouchPanel.cs" />
     <Compile Include="Assets\Scripts\Reticle.cs" />
     <Compile Include="Assets\Scripts\RippleControll.cs" />
+    <Compile Include="Assets\Scripts\ShotTrail.cs" />
     <Compile Include="Assets\Scripts\TapRipple.cs" />
   </ItemGroup>
   <ItemGroup>

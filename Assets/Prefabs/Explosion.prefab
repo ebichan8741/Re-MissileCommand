@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b2921299c75994f9a4b21977c05660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explo_timelimit_s: 3
-  collider_radius: 0.33
+  explo_timelimit_s: 2.8
+  collider_radius: 0.3
 --- !u!114 &114301792665120396
 MonoBehaviour:
   m_ObjectHideFlags: 1
