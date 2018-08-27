@@ -12,6 +12,7 @@ public class Missile : MonoBehaviour {
 	public float explo_time_s;
 	public float missile_speed;
 	public GameObject Explosion;
+	public int Score;
 
 	// Use this for initialization
 	void Start () {
@@ -43,6 +44,7 @@ public class Missile : MonoBehaviour {
 			Destroy(gameObject);
 			Vector3 tmp = transform.position;
 			Instantiate(Explosion, new Vector3(tmp.x, tmp.y, tmp.z), Quaternion.identity);
+			FindObjectOfType<Score>().AddPoint(Score);
 		}
 
 		if(collision.gameObject.tag == "Ground")

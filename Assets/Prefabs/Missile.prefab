@@ -213,6 +213,7 @@ MonoBehaviour:
   explo_time_s: 100
   missile_speed: 0.05
   Explosion: {fileID: 1246297638792736, guid: ad915530a0b7ea9489b4addfe1899573, type: 2}
+  Score: 25
 --- !u!212 &212856160532194586
 SpriteRenderer:
   m_ObjectHideFlags: 1
