@@ -16,14 +16,16 @@ public class Missile : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//direction = transform.forward * 0.1f * missile_speed;
 		GameObject[] Cities = GameObject.FindGameObjectsWithTag("City");
-		targetCity = UnityEngine.Random.Range(0, 5);
-		Vector3 targetPos = Cities[targetCity].transform.position;   // City1~6の間でランダムに選択
+
+		// City1~6の間でランダムに選択
+		targetCity = UnityEngine.Random.Range(0, 6);
+		Vector3 targetPos = Cities[targetCity].transform.position;
 		targetDir = targetPos - transform.position;
 		targetDir = targetDir.normalized;
-		transform.rotation = Quaternion.FromToRotation(Vector3.left, targetDir);
-	}
+		// 左方向のベクトルをターゲットに向ける
+		transform.rotation = Quaternion.FromToRotation(Vector3.left, targetDir);	
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -34,7 +36,6 @@ public class Missile : MonoBehaviour {
 			Destroy(gameObject);
 		}
 
-		
 	}
 
 	void OnTriggerEnter2D(Collider2D collision)
@@ -44,7 +45,7 @@ public class Missile : MonoBehaviour {
 			Destroy(gameObject);
 			Vector3 tmp = transform.position;
 			Instantiate(Explosion, new Vector3(tmp.x, tmp.y, tmp.z), Quaternion.identity);
-			FindObjectOfType<Score>().AddPoint(Score);
+			FindObjectOfType<Score>().AddPoint(Score);	// スコア加算
 		}
 
 		if(collision.gameObject.tag == "Ground")

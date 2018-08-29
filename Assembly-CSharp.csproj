@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\EnemyManager.cs" />
     <Compile Include="Assets\Scripts\Explosion.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GradationController.cs" />
     <Compile Include="Assets\Scripts\Missile.cs" />
     <Compile Include="Assets\Scripts\MissileGenerator.cs" />
@@ -72,6 +73,8 @@
     <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\ShotTrail.cs" />
     <Compile Include="Assets\Scripts\TapRipple.cs" />
+    <Compile Include="Assets\Scripts\WaveEmitter.cs" />
+    <Compile Include="Assets\Scripts\WaveStart.cs" />
     <Compile Include="Assets\UIController\Scripts\UIController.cs" />
     <Compile Include="Assets\UIController\Scripts\UIControllerStateMachine.cs" />
     <None Include="Assets\Shader\Ripple.shader" />

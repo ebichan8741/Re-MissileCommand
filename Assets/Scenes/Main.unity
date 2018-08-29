@@ -346,7 +346,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 219, y: 227.25}
+  m_AnchoredPosition: {x: 219, y: 202.15001}
   m_SizeDelta: {x: 328.3, y: 45.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &209393505 stripped
@@ -1876,7 +1876,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb532eb13e8d89a4aa2ddab2b630cea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waves: []
+  wavesToMisilleSporn: 050000000500000005000000
+  WaveGUI: {fileID: 1227286835641908, guid: 6e453014b6860e6489e5aab14154fd9b, type: 2}
 --- !u!4 &950734825
 Transform:
   m_ObjectHideFlags: 0
@@ -2532,7 +2533,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150.05, y: 227.15001}
+  m_AnchoredPosition: {x: 150.05, y: 202.15001}
   m_SizeDelta: {x: 190.4, y: 45.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1294356579
@@ -2680,7 +2681,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -330, y: 227.15001}
+  m_AnchoredPosition: {x: -330, y: 202.05002}
   m_SizeDelta: {x: 140, y: 45.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1322135577
@@ -3322,8 +3323,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -279.7, y: 227.2}
-  m_SizeDelta: {x: 240.6, y: 46}
+  m_AnchoredPosition: {x: -270.1, y: 202.1}
+  m_SizeDelta: {x: 259.8, y: 46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1808309127
 GameObject:

@@ -7,28 +7,25 @@ public class MissileGenerator : MonoBehaviour {
 	public GameObject Missile;
 	public float MinRangeX, MaxRangeX, MinRangeY, MaxRangeY, MinRotRange, MaxRotRange;
 	public float CreateSpeed;
+	public static int MissileCount;
 
 	private float time = 0;
 
 	// Use this for initialization
 	void Start () {
-
+		MissileCount = 0;
 	}
 
 	// Update is called once per frame
 	void Update () {
+		if (!WaveEmitter.isWaveStarted) {
+			return;
+		}
 
 		time += Time.deltaTime;
 		if (time >= CreateSpeed)
 		{
-			GameObject[] Cities = GameObject.FindGameObjectsWithTag("City");
-
-			int i = Random.Range(0, 5);
-			Vector3 targetPos = Cities[i].transform.position;   // City1~6の間でランダムに選択
 			Vector3 missilePos = new Vector3(Random.Range(MinRangeX, MaxRangeX), Random.Range(MinRangeY, MaxRangeY), 0.0f);     // ミサイル生成座標
-			Vector3 targetDir = targetPos - missilePos;
-			var rot = Quaternion.LookRotation(targetDir);
-			rot.z = rot.z * Mathf.Rad2Deg;
 
 			//Instantiate(Missile, new Vector3(Random.Range(MinRangeX, MaxRangeX),
 			//								 Random.Range(MinRangeY, MaxRangeY),
@@ -40,6 +37,9 @@ public class MissileGenerator : MonoBehaviour {
 															 0,
 															 0));
 			time = 0;
+			MissileCount++;
+			Debug.Log(MissileCount);
 		}
 	}
+
 }

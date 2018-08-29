@@ -4,45 +4,71 @@ using UnityEngine;
 
 public class WaveEmitter : MonoBehaviour {
 
-	// Waveプレハブを格納する
-	public GameObject[] waves;
+	// Wave毎のミサイル数を格納する
+	public int[] wavesToMisilleSporn;
+	public static bool isWaveStarted;
+
+	// Wave開始時のGUIプレハブを格納
+	public GameObject WaveGUI;
+
 
 	// 現在のWave
 	private int currentWave;
+	private float time = 0;
 
 	IEnumerator Start()
 	{
-
 		// Waveが存在しなければコルーチンを終了する
-		if (waves.Length == 0)
+		if (wavesToMisilleSporn.Length == 0)
 		{
 			yield break;
 		}
 
 		while (true)
 		{
+			//isWaveStarted = true;
 
-			// Waveを作成する
-			GameObject wave = (GameObject)Instantiate(waves[currentWave], transform.position, Quaternion.identity);
+			// 次waveまでの処理 //////////////////////////////////////////////////////
+			isWaveStarted = false;
+			MissileGenerator.MissileCount = 0;
 
-			// WaveをEmitterの子要素にする
-			wave.transform.parent = transform;
-
-			// Waveの子要素のEnemyが全て削除されるまで待機する
-			while (wave.transform.childCount != 0)
+			// Wave間の処理が終わるまで待機
+			while (!isWaveStarted)
 			{
 				yield return new WaitForEndOfFrame();
 			}
-
-			// Waveの削除
-			Destroy(wave);
-
+			////////////////////////////////////////////////////////////////////////
+			///
+			// Waveのミサイル数が規定値になるまで待機
+			while (wavesToMisilleSporn[currentWave] != MissileGenerator.MissileCount)
+			{
+				
+				yield return new WaitForEndOfFrame();
+			}
+			
 			// 格納されているWaveを全て実行したらcurrentWaveを0にする（最初から -> ループ）
-			if (waves.Length <= ++currentWave)
+			if (wavesToMisilleSporn.Length <= ++currentWave)
 			{
 				currentWave = 0;
 			}
 
 		}
+	}
+
+	private void Update()
+	{
+		if (!isWaveStarted)
+		{
+			Instantiate(WaveGUI);
+			time += Time.deltaTime;
+
+			if(time >= 3)
+			{
+				Destroy(WaveGUI);
+				time = 0;
+				isWaveStarted = true;
+			}
+		}
+		
 	}
 }
