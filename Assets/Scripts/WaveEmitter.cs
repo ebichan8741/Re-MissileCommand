@@ -38,7 +38,7 @@ public class WaveEmitter : MonoBehaviour {
 				yield return new WaitForEndOfFrame();
 			}
 			////////////////////////////////////////////////////////////////////////
-			///
+
 			// Waveのミサイル数が規定値になるまで待機
 			while (wavesToMisilleSporn[currentWave] != MissileGenerator.MissileCount)
 			{
@@ -51,7 +51,6 @@ public class WaveEmitter : MonoBehaviour {
 			{
 				currentWave = 0;
 			}
-
 		}
 	}
 
@@ -59,16 +58,18 @@ public class WaveEmitter : MonoBehaviour {
 	{
 		if (!isWaveStarted)
 		{
-			Instantiate(WaveGUI);
+			//Instantiate(WaveGUI);
+			WaveGUI.SetActive(true);
+
 			time += Time.deltaTime;
 
 			if(time >= 3)
 			{
-				Destroy(WaveGUI);
+				//Destroy(WaveGUI);
+				WaveGUI.SetActive(false);
 				time = 0;
 				isWaveStarted = true;
 			}
 		}
-		
 	}
 }

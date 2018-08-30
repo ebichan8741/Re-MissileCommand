@@ -319,6 +319,7 @@
     <Compile Include="Assets\Scripts\ShotTrail.cs" />
     <Compile Include="Assets\Scripts\TapRipple.cs" />
     <Compile Include="Assets\Scripts\WaveEmitter.cs" />
+    <Compile Include="Assets\Scripts\WaveStart.cs" />
     <Compile Include="Assets\UIController\Scripts\UIController.cs" />
     <Compile Include="Assets\UIController\Scripts\UIControllerStateMachine.cs" />
   </ItemGroup>
