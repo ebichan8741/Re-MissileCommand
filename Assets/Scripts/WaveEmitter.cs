@@ -11,9 +11,8 @@ public class WaveEmitter : MonoBehaviour {
 	// Wave開始時のGUIプレハブを格納
 	public GameObject WaveGUI;
 
-
 	// 現在のWave
-	private int currentWave;
+	public static int currentWave;
 	private float time = 0;
 
 	IEnumerator Start()
@@ -58,14 +57,15 @@ public class WaveEmitter : MonoBehaviour {
 	{
 		if (!isWaveStarted)
 		{
-			//Instantiate(WaveGUI);
-			WaveGUI.SetActive(true);
-
 			time += Time.deltaTime;
 
-			if(time >= 3)
+			if(time >= 7)
 			{
-				//Destroy(WaveGUI);
+				WaveGUI.SetActive(true);
+			}
+
+			if(time >= 12)
+			{
 				WaveGUI.SetActive(false);
 				time = 0;
 				isWaveStarted = true;

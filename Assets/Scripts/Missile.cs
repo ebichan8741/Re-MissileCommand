@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class Missile : MonoBehaviour {
 
-	private Vector2 direction;
-	private int targetCity;
+	private int targetID;
 	private Vector3 targetDir;
 
 	public float explo_time_s;
@@ -16,11 +15,11 @@ public class Missile : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GameObject[] Cities = GameObject.FindGameObjectsWithTag("City");
+		//GameObject[] Cities = GameObject.FindGameObjectsWithTag("City");
 
-		// City1~6の間でランダムに選択
-		targetCity = UnityEngine.Random.Range(0, 6);
-		Vector3 targetPos = Cities[targetCity].transform.position;
+		// City1~6とCommand1~3の間でランダムに選択
+		targetID = UnityEngine.Random.Range(0, 9);
+		Vector3 targetPos = MissileGenerator.targetPos[targetID];
 		targetDir = targetPos - transform.position;
 		targetDir = targetDir.normalized;
 		// 左方向のベクトルをターゲットに向ける

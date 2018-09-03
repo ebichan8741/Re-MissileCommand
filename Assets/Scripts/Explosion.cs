@@ -24,7 +24,6 @@ public class Explosion : MonoBehaviour {
 		CircleCollider2D collider = GetComponent<CircleCollider2D>();
 		collider.radius = collider_radius * time;
 		collider.enabled = true;
-
 	}
 
 	void OnTriggerEnter2D(Collider2D collision)

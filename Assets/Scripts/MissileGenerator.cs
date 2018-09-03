@@ -7,13 +7,29 @@ public class MissileGenerator : MonoBehaviour {
 	public GameObject Missile;
 	public float MinRangeX, MaxRangeX, MinRangeY, MaxRangeY, MinRotRange, MaxRotRange;
 	public float CreateSpeed;
+
 	public static int MissileCount;
+	public static Vector3[] targetPos;
 
 	private float time = 0;
 
 	// Use this for initialization
 	void Start () {
 		MissileCount = 0;
+		GameObject[] Cities = GameObject.FindGameObjectsWithTag("City");
+		GameObject[] Commands = GameObject.FindGameObjectsWithTag("Command");
+
+		int i = 0;
+		for (; i < 6; i++)
+		{
+			targetPos[i] = Cities[i].transform.position;
+			Debug.Log(targetPos[i]);
+		}
+		for (; i < 9; i++)
+		{
+			targetPos[i] = Commands[i].transform.position;
+			Debug.Log(targetPos[i]);
+		}
 	}
 
 	// Update is called once per frame
@@ -38,7 +54,6 @@ public class MissileGenerator : MonoBehaviour {
 															 0));
 			time = 0;
 			MissileCount++;
-			Debug.Log(MissileCount);
 		}
 	}
 

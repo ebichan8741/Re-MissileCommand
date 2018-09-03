@@ -1,4 +1,4 @@
 sceneSetups:
-- path: C:/Users/Tebic/Documents/4year/VR41/VR41_ebihara/Assets/main.unity
+- path: Assets/Scenes/Main.unity
   isLoaded: 1
   isActive: 1
