@@ -9,7 +9,7 @@ public class MissileGenerator : MonoBehaviour {
 	public float CreateSpeed;
 
 	public static int MissileCount;
-	public static Vector3[] targetPos;
+	public static Vector3[] targetPos = new Vector3[9];
 
 	private float time = 0;
 
@@ -25,9 +25,9 @@ public class MissileGenerator : MonoBehaviour {
 			targetPos[i] = Cities[i].transform.position;
 			Debug.Log(targetPos[i]);
 		}
-		for (; i < 9; i++)
+		for (i = 0; i < 3; i++)
 		{
-			targetPos[i] = Commands[i].transform.position;
+			targetPos[i + 6] = Commands[i].transform.position;
 			Debug.Log(targetPos[i]);
 		}
 	}
