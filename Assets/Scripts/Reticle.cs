@@ -6,22 +6,24 @@ public class Reticle : MonoBehaviour {
 
 	public GameObject Explosion;
 	public GameObject ShotTrail;
-
+	
 	private GameObject Command;
-	private GameObject[] CommandChild = new GameObject[10];
 
 	// Use this for initialization
 	void Start () {
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
+	void Update() {
 
 		// スクリーン座標をワールド座標に変換し、レティクルに適用
 		Vector3 mousePos = Input.mousePosition;
 		Vector3 objPos = Camera.main.ScreenToWorldPoint(mousePos);
 		objPos.z = 0;
 		this.transform.position = objPos;
+
+		GameObject[] CommandChild = new GameObject[10];
+		Command = null;
 
 		// レティクルに近いCommandsオブジェクトを検索
 		GameObject[] Commands = GameObject.FindGameObjectsWithTag("Command");
