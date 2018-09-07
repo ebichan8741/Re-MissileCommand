@@ -10,31 +10,31 @@ public class MissileGenerator : MonoBehaviour {
 
 	public static int MissileCount;
 	public static Vector3[] targetPos = new Vector3[9];
+	public static GameObject[] Cities = new GameObject[6];
+	public static GameObject[] Commands = new GameObject[3];
 
 	private float time = 0;
 
 	// Use this for initialization
 	void Start () {
 		MissileCount = 0;
-		GameObject[] Cities = GameObject.FindGameObjectsWithTag("City");
-		GameObject[] Commands = GameObject.FindGameObjectsWithTag("Command");
+		Cities = GameObject.FindGameObjectsWithTag("City");
+		Commands = GameObject.FindGameObjectsWithTag("Command");
 
 		int i = 0;
 		for (; i < 6; i++)
 		{
 			targetPos[i] = Cities[i].transform.position;
-			Debug.Log(targetPos[i]);
 		}
 		for (i = 0; i < 3; i++)
 		{
 			targetPos[i + 6] = Commands[i].transform.position;
-			Debug.Log(targetPos[i]);
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (!WaveEmitter.isWaveStarted) {
+		if (!WaveEmitter.isWaveStart) {
 			return;
 		}
 

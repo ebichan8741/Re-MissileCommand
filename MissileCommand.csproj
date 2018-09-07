@@ -310,23 +310,26 @@
     <Compile Include="Assets\Scripts\Command.cs" />
     <Compile Include="Assets\Scripts\EnemyManager.cs" />
     <Compile Include="Assets\Scripts\Explosion.cs" />
+    <Compile Include="Assets\Scripts\FadeManager.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GradationController.cs" />
     <Compile Include="Assets\Scripts\Missile.cs" />
     <Compile Include="Assets\Scripts\MissileGenerator.cs" />
     <Compile Include="Assets\Scripts\PlayTouchPanel.cs" />
+    <Compile Include="Assets\Scripts\ResultManager.cs" />
+    <Compile Include="Assets\Scripts\ResultText.cs" />
     <Compile Include="Assets\Scripts\Reticle.cs" />
     <Compile Include="Assets\Scripts\RippleControll.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\ShotTrail.cs" />
     <Compile Include="Assets\Scripts\TapRipple.cs" />
+    <Compile Include="Assets\Scripts\TitleManager.cs" />
     <Compile Include="Assets\Scripts\WaveEmitter.cs" />
+    <Compile Include="Assets\Scripts\WaveResult.cs" />
     <Compile Include="Assets\Scripts\WaveTextChange.cs" />
-    <Compile Include="Assets\UIController\Scripts\UIController.cs" />
-    <Compile Include="Assets\UIController\Scripts\UIControllerStateMachine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\Ripple.shader" />
-    <None Include="Assets\UIController\ReleaseNote.txt" />
     <None Include="C:\Users\Tebic\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="C:\Users\Tebic\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="C:\Users\Tebic\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\Alert.uxml" />

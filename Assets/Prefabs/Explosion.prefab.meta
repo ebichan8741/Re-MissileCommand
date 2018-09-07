@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: ad915530a0b7ea9489b4addfe1899573
+labels:
+- Effect
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 100100000

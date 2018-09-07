@@ -387,7 +387,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\Ripple.shader" />
-    <None Include="Assets\UIController\ReleaseNote.txt" />
     <None Include="C:\Users\Tebic\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="C:\Users\Tebic\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="C:\Users\Tebic\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\Alert.uxml" />

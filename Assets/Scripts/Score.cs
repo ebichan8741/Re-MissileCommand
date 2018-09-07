@@ -10,7 +10,7 @@ public class Score : MonoBehaviour
 	public Text highScoreText;
 
 	// スコア
-	private int score;
+	private static int score;
 
 	// ハイスコア
 	private int highScore;
@@ -50,6 +50,11 @@ public class Score : MonoBehaviour
 	public void AddPoint(int point)
 	{
 		score = score + point;
+	}
+
+	public static int GetScore()
+	{
+		return score;
 	}
 
 	// ハイスコアの保存
